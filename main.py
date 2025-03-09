@@ -13,7 +13,7 @@ while True:
         break
 
     qr_codes = decode(frame)
-    print(qr_codes)
+    #print(qr_codes)
     for qr in qr_codes:
         qr_text = qr.data.decode("utf-8")
         print(qr_text)
@@ -23,7 +23,6 @@ while True:
         pts_list = []
         for i in pts:
             pts_list.append((i.x,i.y))
-        print(pts_list)
         cv2.polylines(frame,[np.array(pts_list, np.int32)],True,(255,0,255),3)
         cv2.putText(frame, qr_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 255), 2)
 
