@@ -28,14 +28,6 @@ while True:
         cv2.putText(frame, qr_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 255), 2)
 
 
-
-
-
-
-
-
-
-
     cv2.imshow("cam",frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
